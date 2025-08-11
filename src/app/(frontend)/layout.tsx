@@ -25,6 +25,10 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         <InitTheme />
         <link href="/favicon.ico" rel="icon" sizes="32x32" />
         <link href="/favicon.svg" rel="icon" type="image/svg+xml" />
+        <link
+          href="https://fonts.cdnfonts.com/css/zai-royal-vogue-typewriter-1929"
+          rel="stylesheet"
+        ></link>
       </head>
       <body>
         <Providers>
