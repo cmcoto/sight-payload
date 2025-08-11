@@ -17,6 +17,10 @@ import { plugins } from './plugins'
 import { defaultLexical } from '@/fields/defaultLexical'
 import { getServerSideURL } from './utilities/getURL'
 
+import { en } from '@payloadcms/translations/languages/en'
+import { es } from '@payloadcms/translations/languages/es'
+import { de } from '@payloadcms/translations/languages/de'
+
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
 
@@ -91,5 +95,9 @@ export default buildConfig({
       },
     },
     tasks: [],
+  },
+  // FOR TRANSLATIONS OF THE ADMIN AREA
+  i18n: {
+    supportedLanguages: { en, de, es },
   },
 })
