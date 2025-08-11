@@ -100,4 +100,24 @@ export default buildConfig({
   i18n: {
     supportedLanguages: { en, de, es },
   },
+
+  //FOR LOCALIZATION
+  localization: {
+    locales: [
+      {
+        label: 'English',
+        code: 'en',
+      },
+      {
+        label: 'Español',
+        code: 'es',
+      },
+      {
+        label: 'Deutsch',
+        code: 'de',
+      },
+    ],
+    defaultLocale: 'en', // required
+    fallback: true, // defaults to true
+  },
 })
