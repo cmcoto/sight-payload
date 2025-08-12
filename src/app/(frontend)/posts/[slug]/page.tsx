@@ -71,6 +71,7 @@ export default async function Post({ params: paramsPromise }: Args) {
             />
           )}
         </div>
+
         <Link className="hover:underline hover:text-rose-700" href="/posts">
           Back to Blog
         </Link>
