@@ -14,6 +14,7 @@ import { PostHero } from '@/heros/PostHero'
 import { generateMeta } from '@/utilities/generateMeta'
 import PageClient from './page.client'
 import { LivePreviewListener } from '@/components/LivePreviewListener'
+import Link from 'next/link'
 
 export async function generateStaticParams() {
   const payload = await getPayload({ config: configPromise })
@@ -50,7 +51,7 @@ export default async function Post({ params: paramsPromise }: Args) {
   if (!post) return <PayloadRedirects url={url} />
 
   return (
-    <article className="Article pt-16 pb-16">
+    <article className="Article pt-10 pb-16">
       <PageClient />
 
       {/* Allows redirects for valid pages too */}
@@ -70,6 +71,9 @@ export default async function Post({ params: paramsPromise }: Args) {
             />
           )}
         </div>
+        <Link className="hover:underline hover:text-rose-700" href="/posts">
+          Back to Blog
+        </Link>
       </div>
     </article>
   )
