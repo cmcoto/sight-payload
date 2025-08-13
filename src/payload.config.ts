@@ -16,6 +16,7 @@ import { Header } from './Header/config'
 import { plugins } from './plugins'
 import { defaultLexical } from '@/fields/defaultLexical'
 import { getServerSideURL } from './utilities/getURL'
+import { uploadthingStorage } from '@payloadcms/storage-uploadthing'
 
 import { en } from '@payloadcms/translations/languages/en'
 import { es } from '@payloadcms/translations/languages/es'
@@ -75,6 +76,15 @@ export default buildConfig({
   plugins: [
     ...plugins,
     // storage-adapter-placeholder
+    uploadthingStorage({
+      collections: {
+        media: true,
+      },
+      options: {
+        token: process.env.UPLOADTHING_TOKEN || '',
+        //acl: 'public-read',
+      },
+    }),
   ],
   secret: process.env.PAYLOAD_SECRET,
   sharp,
