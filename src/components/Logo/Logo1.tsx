@@ -23,7 +23,7 @@ export const Logo = (props: Props) => {
       fetchPriority={priority}
       decoding="async"
       //className={clsx('max-w-[9.375rem] w-full h-[34px]', className)}
-      src="http://localhost:3000/api/media/file/Sight-For-Sore-Eyes.jpg"
+      src="https://qn9nusx0mu.ufs.sh/f/ZGpwNX1xO5HSEsjFNpnZ36A8wJOjQzum2SdBgelTsyXUafbK"
     />
   )
 }
