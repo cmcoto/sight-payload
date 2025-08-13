@@ -11,15 +11,5 @@ export const ContentWithMedia: Block = {
       type: 'richText',
       name: 'content',
     },
-    {
-      type: 'upload',
-      name: 'image',
-      relationTo: 'media',
-    },
-    {
-      type: 'radio',
-      name: 'textPosition',
-      options: ['Left', 'Right'],
-    },
   ],
 }
