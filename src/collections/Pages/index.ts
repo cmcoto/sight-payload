@@ -5,6 +5,7 @@ import { authenticatedOrPublished } from '../../access/authenticatedOrPublished'
 import { Archive } from '../../blocks/ArchiveBlock/config'
 import { CallToAction } from '../../blocks/CallToAction/config'
 import { Headings } from '../../blocks/Headings/config'
+import { ContentWithMedia } from '../../blocks/ContentWithMedia'
 import { Content } from '../../blocks/Content/config'
 import { FormBlock } from '../../blocks/Form/config'
 import { MediaBlock } from '../../blocks/MediaBlock/config'
@@ -64,6 +65,13 @@ export const Pages: CollectionConfig<'pages'> = {
       type: 'text',
       required: true,
     },
+    //CONTENT WITH MEDIA BLOCK
+    {
+      type: 'blocks',
+      blocks: [ContentWithMedia],
+      name: 'ContentWithMedia',
+    },
+    //END OF CONTENT WITH MEDIA BLOCK
     {
       type: 'tabs',
       tabs: [
