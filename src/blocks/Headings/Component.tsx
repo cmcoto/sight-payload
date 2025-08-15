@@ -9,7 +9,7 @@ export const HeadingsBlock: React.FC<HeadingsBlockProps> = ({ links, richText })
   return (
     <div className="container">
       <div className="Heading">
-        <div className="max-w-[48rem] flex items-center">
+        <div className=" flex items-center">
           {richText && <RichText className="mb-0" data={richText} enableGutter={false} />}
         </div>
         <div className="flex flex-col gap-8">
